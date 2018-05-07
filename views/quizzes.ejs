@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> Quizzes list </title>
+<!-- 	<link rel='stylesheet' href='/stylesheets/style.css'/> 
+ --></head>
+
+<body>
+	<a href="/">Home</a>
+	<a href="/credits">credits</a>
+	<h1>Todos los Quizzes</h1>
+	<ul>
+	<% for (let i in quizzes){ %>
+		<% const quiz = quizzes[i]; %>
+	
+		<li>
+		<!-- 		cuando pongo el lo imprime por pantalla, lo manda al navegador -->
+			<%= quiz.question %> : <%= quiz.answer %>
+		</li>
+	<% } %>
+</ul>
+</body>
+</html>
